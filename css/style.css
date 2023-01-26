@@ -1,0 +1,333 @@
+/* http://meyerweb.com/eric/tools/css/reset/
+   v5.0.1 | 20191019
+   License: none (public domain)
+*/
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, menu, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+main, menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline; }
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, main, menu, nav, section {
+  display: block; }
+
+/* HTML5 hidden-attribute fix for newer browsers */
+*[hidden] {
+  display: none; }
+
+body {
+  line-height: 1; }
+
+menu, ol, ul {
+  list-style: none; }
+
+blockquote, q {
+  quotes: none; }
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: '';
+  content: none; }
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0; }
+
+.footer {
+  padding: 48px 0;
+  background: #000;
+  color: #fff; }
+  .footer__social {
+    display: flex;
+    align-items: center; }
+    .footer__social svg {
+      width: 22px;
+      height: 22px;
+      margin: 0 12px; }
+  .footer__links {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start; }
+    .footer__links li {
+      margin: 10px;
+      font-size: 13px;
+      text-align: left;
+      font-style: normal;
+      font-weight: 400;
+      font-family: "SourceCodePro";
+      background-color: initial;
+      text-transform: none;
+      color: white;
+      display: inline-block;
+      list-style: none;
+      line-height: 24px; }
+  .footer__copyright {
+    font-size: 10px;
+    line-height: 16px;
+    text-align: left;
+    font-style: normal;
+    font-weight: 400;
+    font-family: SourceCodePro-Regular;
+    align-items: center;
+    display: flex;
+    justify-content: space-between;
+    padding-top: 28px;
+    width: 280px; }
+    .footer__copyright svg {
+      width: 70%;
+      margin-right: 10px; }
+
+@font-face {
+  font-family: 'Paralucent';
+  src: url("https://www.thrillist.com/static/fonts/Paralucent/paralucent-bold-webfont.woff2") format("woff2");
+  font-weight: 700; }
+
+@font-face {
+  font-family: 'Paralucent';
+  src: url("https://www.thrillist.com/static/fonts/Paralucent/paralucent-med-webfont.woff2") format("woff2");
+  font-weight: 600; }
+
+@font-face {
+  font-family: 'SourceCodePro';
+  src: url("https://www.thrillist.com/static/fonts/SourceCodePro/SourceCodePro-Regular.woff2") format("woff2");
+  font-weight: 400; }
+
+@font-face {
+  font-family: 'SourceCodePro';
+  src: url("https://www.thrillist.com/static/fonts/SourceCodePro/SourceCodePro-Bold.woff2") format("woff2");
+  font-weight: 700; }
+
+* {
+  box-sizing: border-box; }
+
+.container {
+  max-width: 1200px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 0 16px; }
+
+.header {
+  display: block;
+  position: fixed;
+  width: 100%;
+  overflow: hidden;
+  z-index: 1000001;
+  top: 0px;
+  left: 0px;
+  box-shadow: none;
+  background: #f5f0e7;
+  z-index: 100;
+  transition: transform 0.2s linear 0s, max-height 0.2s linear 0s, z-index 0s linear 0s;
+  transform: translateY(0px);
+  max-height: 96px;
+  color: #eb481f; }
+  .header__top {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 50px; }
+    .header__top-right {
+      display: flex;
+      align-items: center;
+      gap: 5px; }
+  .header__logo {
+    width: 108px;
+    height: 30px;
+    color: #eb481f; }
+  .header__subs {
+    display: inline-flex;
+    padding: 8px 10px;
+    width: auto;
+    cursor: pointer;
+    box-sizing: border-box;
+    border-radius: 4px;
+    transition: all 200ms ease-out 0s;
+    background-color: transparent;
+    color: #eb481f;
+    box-shadow: none;
+    border: 1px solid #eb481f !important;
+    text-transform: uppercase;
+    font-size: 10px;
+    line-height: 12px;
+    text-align: left;
+    font-style: normal;
+    font-weight: 600;
+    font-family: "Source Sans Pro"; }
+    .header__subs svg {
+      width: 12px;
+      height: 12px;
+      fill: #eb481f;
+      margin-right: 10px; }
+  .header__burger {
+    width: 19px;
+    height: 19px;
+    color: #eb481f;
+    margin: 0 8px; }
+  .header__nav {
+    font-size: 12px;
+    line-height: 14px;
+    text-align: center;
+    font-style: normal;
+    font-weight: 700;
+    font-family: SourceCodePro;
+    text-transform: uppercase;
+    display: flex;
+    overflow: hidden;
+    align-items: center;
+    height: 46px;
+    padding-bottom: 8px; }
+    .header__nav li {
+      padding: 9px;
+      margin-right: 4px;
+      white-space: nowrap; }
+
+.header.hide {
+  transform: translateY(-100%); }
+
+.video {
+  margin-top: 96px; }
+  .video__mid {
+    padding: 20px 16px 28px;
+    background: #141414;
+    color: #fff; }
+  .video__theme {
+    font-size: 11px;
+    line-height: 12px;
+    text-align: left;
+    font-style: normal;
+    text-transform: uppercase;
+    font-weight: 700;
+    font-family: SourceCodePro; }
+  .video__header {
+    font-size: 22px;
+    line-height: 28px;
+    text-align: left;
+    font-style: normal;
+    font-weight: 700;
+    font-family: Paralucent;
+    margin-top: 16px; }
+  .video__author {
+    font-size: 12px;
+    line-height: 14px;
+    text-align: left;
+    color: black;
+    font-style: normal;
+    font-weight: 400;
+    font-family: "Source Sans Pro";
+    background-color: initial;
+    text-transform: none;
+    margin-top: 20px;
+    padding-top: 4px; }
+    .video__author span {
+      border-bottom: 1px solid #ec481f; }
+  .video__date {
+    font-size: 10px;
+    line-height: 12px;
+    text-align: left;
+    color: #646464;
+    font-style: normal;
+    font-weight: 400;
+    font-family: SourceCodePro;
+    background-color: initial;
+    text-transform: none;
+    margin-top: 7px;
+    padding-top: 4px; }
+  .video__text {
+    font-size: 18px;
+    line-height: 28px;
+    color: #333333;
+    font-style: normal;
+    font-weight: 400;
+    font-family: "Source Serif Pro";
+    background-color: initial;
+    text-transform: none;
+    margin-bottom: 20px; }
+
+.list {
+  margin: 28px 0; }
+  .list__header {
+    font-size: 15px;
+    text-align: left;
+    font-style: normal;
+    font-weight: 700;
+    font-family: SourceCodePro;
+    background-color: initial;
+    text-transform: uppercase;
+    color: black;
+    line-height: 1;
+    margin-bottom: 24px; }
+  .list__inner {
+    display: grid;
+    gap: 24px; }
+
+.item {
+  display: flex;
+  align-items: start; }
+  .item__img {
+    position: relative;
+    overflow: hidden;
+    height: -webkit-fit-content;
+    height: -moz-fit-content;
+    height: fit-content;
+    max-width: 30.2326%;
+    width: 100%;
+    margin-right: 20px; }
+    .item__img img {
+      width: 100%;
+      height: auto; }
+  .item__svg {
+    position: absolute;
+    z-index: 1;
+    background: #eb481f;
+    border-radius: 0px;
+    display: grid;
+    place-content: center;
+    width: 28px;
+    padding: 6px;
+    top: 10px;
+    left: 10px; }
+    .item__svg svg {
+      display: block;
+      width: 16px;
+      height: 16px;
+      fill: #fff; }
+  .item__theme {
+    margin-bottom: 8px;
+    font-size: 11px;
+    line-height: 11px;
+    text-align: left;
+    font-style: normal;
+    font-weight: 700;
+    font-family: SourceCodePro;
+    background-color: initial;
+    text-transform: uppercase;
+    color: #eb471e; }
+  .item__title {
+    transition: all 200ms ease-out 0s;
+    font-size: 15px;
+    line-height: 20px;
+    text-align: left;
+    color: black;
+    font-style: normal;
+    font-weight: 700;
+    font-family: Paralucent;
+    background-color: initial;
+    text-transform: none; }
+    .item__title:hover {
+      color: #eb481f; }
